@@ -6,17 +6,22 @@ Author URI: https://fiberlicious.my
 Version: 1.0
  */
 
- 
- 
- 
+ .spacer
+{
+    width: 100%;
+    height: 20px;
+}
  
 #featured {
+	
 	 color: #000000;
 	 text-align: center;
 }
 
+/*-------------------------------- */
 
 body {
+	margin: 0 auto;
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: #545454;
@@ -32,7 +37,9 @@ p {
 }
  
 div.container {
-    max-width: 960px;
+	
+	
+    max-width: 100%;
     margin: 0 auto;
 }
  
@@ -44,9 +51,36 @@ article.post:last-of-type {
     border-bottom: none;
 }
  
+
+ body.admin-bar .site-header{
+	 top: 10px;
+ }
+ 
+ .page-layout{
+	 padding-top: 100px;
+ }
+ 
 .site-header {
-	
+  
+  font-size: 120%;
+  padding-right:20px;
+  padding-left:20px;
+  transform: translateZ(0);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  /* padding: 5px 20px; */
+  background: #ffffff;
+  color: #f1f1f1;
     /*border-bottom: 3px solid #ecf0f1;*/
+	
+	 @media (max-width: 1100px) {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }
  
 .site-footer {
@@ -54,6 +88,11 @@ article.post:last-of-type {
 }
 
 /* Nav Menu */
+
+
+
+
+
 .navigation-menu ul {
     margin: 0;
     padding: 0;
@@ -82,6 +121,7 @@ article.post:last-of-type {
  
 .navigation-menu ul li a:link,
 .navigation-menu ul li a:visited {
+	
     display: block;
     padding: 12px 17px;
     /*border: 2px solid #ecf0f1;*/

@@ -18,19 +18,21 @@
 
  
 <header class="site-header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-    <h1><?php bloginfo( 'name' ); ?></h1>
-    <h4><?php 
+    <!-- <h1><a href="< echo home_url(); ?>">< bloginfo( 'name' ); ?></a></h1> -->
+    <!--  <h1>< bloginfo( 'name' ); ?></h1> -->
+    <!--<h4><
 	
 	//bloginfo( 'description' ); 
 
-	?></h4>
+	?></h4>-->
     
 	<a href="<?php echo home_url();?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 	</a>
-	<nav class="navigation-menu">
+	<nav class="navigation-menu"><p class="text-dark">
 	    <?php $args = [ 'theme_location' => 'primary' ]; ?>
         <?php wp_nav_menu($args) ?>
+		</p>
         </nav>
 	
 </header>
+

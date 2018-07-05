@@ -9,7 +9,7 @@
 
 get_header();
 
-  echo '<div class="container">';
+  echo '<br><div id="main" class="container">';
   echo '<div class="row">';
   echo '<div class="col-lg-6">';
  
@@ -60,3 +60,4 @@ endif;
 get_footer();
  
 ?>
+
