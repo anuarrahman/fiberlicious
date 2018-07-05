@@ -1,0 +1,108 @@
+
+/*
+Theme Name: fiberlicioustheme
+Author: Anuar
+Author URI: https://fiberlicious.my
+Version: 1.0
+ */
+
+ 
+ 
+ 
+ 
+#featured {
+	 color: #000000;
+	 text-align: center;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #545454;
+}
+ 
+a:link, a:visited {
+	
+    color: #4285f4;
+}
+ 
+p {
+    line-height: 1.7em;
+}
+ 
+div.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+ 
+article.post {
+    /*border-bottom: 4px dashed #ecf0f1;*/
+}
+ 
+article.post:last-of-type {
+    border-bottom: none;
+}
+ 
+.site-header {
+	
+    /*border-bottom: 3px solid #ecf0f1;*/
+}
+ 
+.site-footer {
+    /*border-top: 3px solid #ecf0f1;*/
+}
+
+/* Nav Menu */
+.navigation-menu ul {
+    margin: 0;
+    padding: 0;
+	
+}
+ 
+.navigation-menu ul:before, .navigation-menu ul:after {
+    content: "";
+    display: table;
+}
+ 
+.navigation-menu ul:after {
+    clear: both;
+}
+ 
+.navigation-menu ul {
+    *zoom: 1
+}
+ 
+.navigation-menu ul li {
+    list-style: none;
+    float: left;
+    margin-right: 3px;
+	
+}
+ 
+.navigation-menu ul li a:link,
+.navigation-menu ul li a:visited {
+    display: block;
+    padding: 12px 17px;
+    /*border: 2px solid #ecf0f1;*/
+    border-bottom: none;
+    text-decoration: none;
+}
+.navigation-menu ul li a:hover {
+    background-color: #ebf5fb;
+}
+
+
+.tdcontent {
+    border: none;
+    background: #fdf5e1;
+    padding: 10px;
+}
+ 
+.tdtitle {
+    /*border: dashed 3px #2ecc71;*/
+    background: #d7fee8;
+    padding: 10px;
+}
+
+
