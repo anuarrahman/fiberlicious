@@ -15,3 +15,4 @@ register_nav_menus( [ 'primary' => __( 'Primary Menu' ) ] );
 
 //featured Image
 add_theme_support( 'post-thumbnails' );
+

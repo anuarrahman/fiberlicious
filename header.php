@@ -16,8 +16,8 @@
 <body <?php body_class(); ?>>
 
 
- 
-<header class="site-header">
+ <div class="navbar-fixed-top">
+<header class="site-header" style="position: fixed; width: 100%; top: 0; height: 100px; background: white; color: white; z-index: 1;">
     <!-- <h1><a href="< echo home_url(); ?>">< bloginfo( 'name' ); ?></a></h1> -->
     <!--  <h1>< bloginfo( 'name' ); ?></h1> -->
     <!--<h4><
@@ -28,11 +28,10 @@
     
 	<a href="<?php echo home_url();?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 	</a>
-	<nav class="navigation-menu"><p class="text-dark">
+	<nav class="navigation-menu">
 	    <?php $args = [ 'theme_location' => 'primary' ]; ?>
         <?php wp_nav_menu($args) ?>
-		</p>
         </nav>
 	
 </header>
-
+</div>

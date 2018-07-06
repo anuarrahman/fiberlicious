@@ -9,9 +9,8 @@
 
 get_header();
 
-  echo '<br><div id="main" class="container">';
-  echo '<div class="row">';
-  echo '<div class="col-lg-6">';
+  echo '<div class="container" style="margin-top:100px; margin-bottom:100px; ">';
+  
  
  
 if ( have_posts() ) :
@@ -19,9 +18,10 @@ if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
 ?>
 
-
- <article class="post">
  
+ <article class="post">
+  <div class="row">
+  <div class="col-lg-6">
  <a href="<?php the_permalink() ?>"><br>
  
  <?php if (is_home()):?>
@@ -43,8 +43,10 @@ if ( have_posts() ) :
    <?php the_content() ?> 
    
    <?php endif ?>
-	 
+   </div>
+   </div>
  </article>
+ 
  
 	<?php endwhile;
 	
@@ -53,8 +55,7 @@ else :
  
 endif;
 
-    echo ' </div>';
-	echo ' </div>';
+    
 	echo ' </div>';
 
 get_footer();

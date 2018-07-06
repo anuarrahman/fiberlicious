@@ -9,7 +9,7 @@ get_header();
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post(); ?>
 		
-		<article class="page-layout">
+		<article class="page-layout" style="margin-top:100px";>
 			<table border="0" width="100%">
 				<tr>
 					<td class="tdcontent"><?php the_content() ?></td>
