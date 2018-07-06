@@ -40,7 +40,7 @@ p {
  
 div.container {
 	
-	
+	padding-left:20px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -67,9 +67,6 @@ article.post:last-of-type {
 }
 
 /* Nav Menu */
-
-
-
 
 
 .navigation-menu ul {

@@ -10,7 +10,7 @@
 get_header();
 
   echo '<div class="container" style="margin-top:100px; margin-bottom:100px; ">';
-  
+  echo '<div class="row">';
  
  
 if ( have_posts() ) :
@@ -18,38 +18,41 @@ if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
 ?>
 
- 
- <article class="post">
-  <div class="row">
-  <div class="col-lg-6">
- <a href="<?php the_permalink() ?>"><br>
- 
- <?php if (is_home()):?>
   
-  <div id="featured">
-  <?php the_post_thumbnail(); ?>
-  <br>
-  <h2><?php the_title() ?></h2></a>
-  </div>
-
+  
+ <?php if (is_singular()): ?>
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-6">
  <?php endif ?>
  
-
+  <?php if (is_home()):?>
+     <div class="col-sm-4">
+  <?php endif ?>
+  
+  <article class="post">
+  <a href="<?php the_permalink() ?>">
  
-   <?php if( is_singular() ) : ?>
-   
-   <h2><?php the_title() ?></a></h2> 
-   
-   <?php the_content() ?> 
-   
+ <?php if (is_home()):?>
+    <div id="featured">
+      <?php the_post_thumbnail(); ?>
+      <h2><?php the_title() ?></h2></a>
+    </div>
+ <?php endif ?>
+ 
+  
+  <?php if( is_singular() ) : ?>
+     <h2><?php the_title() ?></a></h2> 
+     <?php the_content() ?> 
+     </div>
+ 
    <?php endif ?>
-   </div>
-   </div>
- </article>
- 
- 
-	<?php endwhile;
-	
+   </article>
+  
+  </div>
+<?php endwhile;
+
+echo '</div>';
 else :
 	echo '<p>There are no posts!</p>';
  

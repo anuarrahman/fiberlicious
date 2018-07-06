@@ -2,8 +2,6 @@
  
 get_header();
 
-echo '<div class="spacer">&nbsp;</div>';
-
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post(); ?>
  

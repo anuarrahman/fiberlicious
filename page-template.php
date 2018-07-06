@@ -9,13 +9,15 @@ get_header();
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post(); ?>
 		
-		<article class="page-layout" style="margin-top:100px";>
-			<table border="0" width="100%">
-				<tr>
-					<td class="tdcontent"><?php the_content() ?></td>
-					<td class="tdtitle" width="30%"><h2><?php the_title() ?></h2></td>
-				</tr>
-			</table>
+		
+		<article class="container" style="margin-top:100px";>
+		  <div class="row">
+		    <div class="col-lg-2">
+			</div>
+		    <div class="col-lg-4">
+			     <?php the_content() ?></td>
+			</div>
+		   </div>
 		</article>
 	
 	<?php endwhile;

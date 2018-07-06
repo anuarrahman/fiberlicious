@@ -16,8 +16,8 @@
 <body <?php body_class(); ?>>
 
 
- <div class="navbar-fixed-top">
-<header class="site-header" style="position: fixed; width: 100%; top: 0; height: 100px; background: white; color: white; z-index: 1;">
+
+<header class="site-header" style="position: fixed; width: 100%; top: 0; height: auto; background: white; color: white; z-index: 1;">
     <!-- <h1><a href="< echo home_url(); ?>">< bloginfo( 'name' ); ?></a></h1> -->
     <!--  <h1>< bloginfo( 'name' ); ?></h1> -->
     <!--<h4><
@@ -34,4 +34,4 @@
         </nav>
 	
 </header>
-</div>
+
