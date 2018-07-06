@@ -11,54 +11,77 @@ get_header();
 
   echo '<div class="container" style="margin-top:100px; margin-bottom:100px; ">';
   echo '<div class="row">';
- 
+  
+  echo '<div class="col-lg-10">';
  
 if ( have_posts() ) :
+
+      echo '<div class="container">';
+      echo '<div class="row">';
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 ?>
-
-  
-  
- <?php if (is_singular()): ?>
-    <div class="col-lg-2">
-    </div>
-    <div class="col-lg-6">
- <?php endif ?>
+                    <?php if (is_singular()): ?>
+                        <div class="col-lg-2">
+                        </div>
+                        <div class="col-lg-6">
+                    <?php endif ?>
  
-  <?php if (is_home()):?>
-     <div class="col-sm-4">
-  <?php endif ?>
+                    <?php if (is_home()):?>
+                        <div class="col-sm-4">
+                    <?php endif ?>
   
-  <article class="post">
-  <a href="<?php the_permalink() ?>">
+                  <article class="post">
+					
+                       <a href="<?php the_permalink() ?>">
  
- <?php if (is_home()):?>
-    <div id="featured">
-      <?php the_post_thumbnail(); ?>
-      <h2><?php the_title() ?></h2></a>
-    </div>
- <?php endif ?>
+                    <?php if (is_home()):?>
+                       <div id="featured">
+                       <?php the_post_thumbnail(); ?>
+                   <h2><?php the_title() ?></h2></a>
+                        </div>
+                    <?php endif ?>
  
   
-  <?php if( is_singular() ) : ?>
-     <h2><?php the_title() ?></a></h2> 
-     <?php the_content() ?> 
-     </div>
+                    <?php if( is_singular() ) : ?>
+                    <h2><?php the_title() ?></a></h2> 
+                    <?php the_content() ?>  
+                   <?php endif ?>
+   
+                </article>
+                </div>
+	
  
-   <?php endif ?>
-   </article>
-  
-  </div>
 <?php endwhile;
 
-echo '</div>';
-else :
-	echo '<p>There are no posts!</p>';
- 
-endif;
+   echo '</div>';
+   echo '</div>';
 
-    
+else :
+
+	echo '<p>There are no posts!</p>';
+	
+   echo '</div>';
+   
+endif;
+?>
+</div>
+  <div class="col-lg-2">
+    <h3>Popular Posts</h3>
+      <ul>
+	    <?php $popular = new WP_Query(array('posts_per_page'=>7, 'meta_key'=>'popular_posts', 'orderby'=>'meta_value_num', 'order'=>'DESC'));
+	       while ($popular->have_posts()) : $popular->the_post(); ?>
+	       <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+	    <?php endwhile; wp_reset_postdata(); ?>
+     </ul>
+
+     </div>
+  </div>
+</div>
+
+
+<?php
+
 	echo ' </div>';
 
 get_footer();

@@ -13,6 +13,7 @@ if ( have_posts() ) :
 		<article class="container" style="margin-top:100px";>
 		  <div class="row">
 		    <div class="col-lg-2">
+			     <h2> ABOUT US </h2>
 			</div>
 		    <div class="col-lg-4">
 			     <?php the_content() ?></td>
